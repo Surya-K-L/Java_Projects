@@ -1,8 +1,8 @@
 import java.util.*;
 public class Cross_N_Noughts {
     private static char board[][] = { { ' ', ' ', ' ' },
-            { ' ', ' ', ' ' },
-            { ' ', ' ', ' ' } };
+                                      { ' ', ' ', ' ' },
+                                      { ' ', ' ', ' ' } };
     private static char current = 'X';
 
     public static void main(String args[]) {
