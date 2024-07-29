@@ -8,6 +8,7 @@ public class Cross_N_Noughts {
     public static void main(String args[]) {
         Scanner sc = new Scanner(System.in);
         boolean won = false;
+        int boardfull=0;
         System.out.println(" Cross 'n' Noughts");
         System.out.print(" Enter \"R " + "to get Rules of the game (or) Enter \"N " + "to Skip the Rules: ");
         String needRules = sc.next().toUpperCase();
@@ -15,7 +16,7 @@ public class Cross_N_Noughts {
             displayRules();
         }
         printBoard();
-        while (!won && !isBoardFull()) 
+        while (!won && boardfull<9) 
         {
             int row = -1;
             int col = -1;
@@ -27,6 +28,7 @@ public class Cross_N_Noughts {
                         col = sc.nextInt() - 1;
                         if (row >= 0 && row < 3 && col >= 0 && col < 3 && board[row][col] == ' ') {
                             board[row][col] = current;
+                            boardfull++;
                             break;
                         } else if (board[row][col] == 'X' || board[row][col] == 'O') {
                             System.out.println("The particular place is already filled with " + board[row][col]);
@@ -48,7 +50,7 @@ public class Cross_N_Noughts {
             if (won) {
                 System.out.println();
                 System.out.println("---Player " + current + " wins!!---");
-            } else if (isBoardFull()) {
+            } else if (boardfull==9) {
                 System.out.println(" ---The Game is tie---");
             } else {
                 current = (current == 'X') ? 'O' : 'X';
@@ -72,18 +74,6 @@ public class Cross_N_Noughts {
             System.out.println("   -------------");
         }
     }
-
-    public static boolean isBoardFull() {
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                if (board[i][j] == ' ') {
-                    return false;
-                }
-            }
-        }
-        return true;
-    }
-
     public static boolean checkwin() {
         for (int i = 0; i < 3; i++) {
             if (board[i][0] == current && board[i][1] == current && board[i][2] == current) {
