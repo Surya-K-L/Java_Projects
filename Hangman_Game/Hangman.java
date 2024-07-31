@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.File;
 import java.io.FileNotFoundException;
 
-public class Hangman {
+public class Hangman_Single_Player{
     public static void main(String args[]) throws FileNotFoundException
     {
         Scanner sc=new Scanner(new File("F:/Java Projects Git/Console.txt"));
