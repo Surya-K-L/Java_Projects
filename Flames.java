@@ -7,7 +7,7 @@ public class Flames {
         while(true)
         {
             System.out.print("  Enter name of a Boy  : ");
-            String firstname = sc.next().toLowerCase().replaceAll("\\s+","");
+            String firstname = sc.nextLine().toLowerCase().replaceAll("\\s+","");
             String fname=""+Character.toUpperCase(firstname.charAt(0))+firstname.substring(1,firstname.length());
             if(ValidName(firstname))
             {
@@ -15,7 +15,7 @@ public class Flames {
                 while(true)
                 {
                     System.out.print("  Enter name of a Girl : ");
-                    String secondname = sc.next().toLowerCase().replaceAll("\\s+","");
+                    String secondname = sc.nextLine().toLowerCase().replaceAll("\\s+","");
                     String sname=""+Character.toUpperCase(secondname.charAt(0))+secondname.substring(1,secondname.length());
                     if(ValidName(secondname))
                     {
