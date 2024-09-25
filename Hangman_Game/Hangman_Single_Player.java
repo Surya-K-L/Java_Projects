@@ -17,9 +17,7 @@ public class Hangman_Single_Player{
         Random rand=new Random();
         
         String word=words.get(rand.nextInt(words.size()));
-
-        //System.out.print(word);
-
+        
         ArrayList<Character>playerGuess=new ArrayList<>();
         int wrongCount=0;
 
