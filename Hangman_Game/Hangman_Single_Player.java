@@ -105,7 +105,6 @@ public class Hangman_Single_Player{
     public static void printHangedMan(int wrongCount)
     {
         System.out.println(("-").repeat(45));
-        //System.out.println();
         System.out.println(" ------- ");
             System.out.println(" |     | ");
             if(wrongCount>=1)
